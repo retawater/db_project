@@ -13,6 +13,9 @@ cursor.execute(query)
 
 data = cursor.fetchall()
 
+cursor.close()
+db.close()
+
 unique_emails = numpy.unique(numpy.array([data[i][4] for i in range(4)]))
 
 messages = []
